@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRAVELER</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/taj mahal.avif" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="stylesheet" href="css/qrstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- Topbar Start -->
+    <!--<div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    
+    <div class="wrapper">
+        
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="fpmon">Monument:</label>
+        <input type="text" id="fmon" name="fmon"><br><br>
+        <label for="fqu">Ticket quantity</label>
+         <input type="text" id="fqu" name="fqu"><br><br>
+        <label for="fdate">Date</label>
+        <input type="text" id="fdate" name="fdate"><br><br>
+        <label for="fupi">UPI ID</label>
+        <input type="text" id="fupi" name="fupi"><br><br>
+        <div class="form">
+        <label for="phonenumber">phonenumber</label>
+        <input type="text" id="name" placeholder="Enter number">
+        <button onclick="save_func()">pay</button> 
+        </div>
+        <div class="qr-code">
+            <img src="" alt="qr-code">
+        </div>
+    </div>
+    <script src="js/qr.js"></script>
+    <script>
+        function save_func(){
+            const fs = require('fs');
+            var phn=document.getElementById("name").value;
+            var data1=phn;
+            let data=data1;
+            fs.writeFile('DataList.txt', data, (err) => {
+                if (err) throw err;
+            })
+
+        };
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+  
+</body>
+
+</html>
+
+
